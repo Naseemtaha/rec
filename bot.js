@@ -6,7 +6,7 @@ client.on('ready', () => {
   console.log('GeRaLd Bot Is Online')
   console.log('---------------')
 });
-let emojiss = require("node-emoji");//npm i node-emoji
+
 client.on("message", msg=>{
 if(msg.content.startsWith(`${prefix}setRole`)){//Naseem is one
     if(!arf[msg.guild.id]) arf[msg.guild.id] = {
