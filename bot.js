@@ -6,6 +6,8 @@ client.on('ready', () => {
   console.log('GeRaLd Bot Is Online')
   console.log('---------------')
 });
+const arf = JSON.parse(fs.readFileSync("./arf.json", "utf8"));
+let emojiss = require("node-emoji");//npm i node-emoji
 
 client.on("message", msg=>{
 if(msg.content.startsWith(`${prefix}setRole`)){//Naseem is one
@@ -88,5 +90,6 @@ if(member.roles.find(r=>r.name == rolee)) return;
 }).catch(e => {console.log(e.message)});
 }).catch(e => {console.log(e.message)});
 })
+  client.login(process.env.BOT_TOKEN);
 ///
 }});
