@@ -1,4 +1,11 @@
-const arf = JSON.parse(fs.readFileSync("./arf.json", "utf8"));
+const Discord = require("discord.js");
+const client = new Discord.Client();
+client.on('ready', () => {
+  client.user.setGame(` By GeRaLd .`,'https://www.twitch.tv/saidkm');
+  console.log('---------------');
+  console.log('GeRaLd Bot Is Online')
+  console.log('---------------')
+});
 let emojiss = require("node-emoji");//npm i node-emoji
 client.on("message", msg=>{
 if(msg.content.startsWith(`${prefix}setRole`)){//Naseem is one
